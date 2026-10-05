@@ -1,0 +1,246 @@
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #0f172a, #1e293b, #0f172a);
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.landing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.landing-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.landing-title {
+  background: linear-gradient(to right, #ffffff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.landing-nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.landing-nav a:hover {
+  color: #ffffff;
+}
+
+.landing-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 8rem 4rem 12rem 4rem;
+  position: relative;
+  background-image: url("../../assets/monsoon_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Monsoon/weather dark overlay */
+.landing-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.7) 60%, rgba(15, 23, 42, 0.3) 100%);
+  pointer-events: none;
+}
+
+.landing-hero-content {
+  max-width: 800px;
+  z-index: 1;
+  margin-left: 5%;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0 0 1rem 0;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #38bdf8;
+  margin: 0 0 1.5rem 0;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0 0 3rem 0;
+  max-width: 600px;
+}
+
+.cta-button {
+  background: #0284c7;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px 0 rgba(2, 132, 199, 0.39);
+}
+
+.cta-button:hover {
+  background: #0369a1;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.5);
+}
+
+.landing-features {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 2rem;
+  background: transparent;
+  border-top: none;
+  flex-wrap: wrap;
+  margin-top: -80px;
+  position: relative;
+  z-index: 10;
+}
+
+.landing-about {
+  padding: 6rem 2rem 4rem 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.landing-contact {
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.landing-about h2, .landing-contact h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #38bdf8;
+}
+
+.landing-about p, .landing-contact p {
+  font-size: 1.15rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.feature-item {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  background: rgba(30, 41, 59, 0.8);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+  color: #e2e8f0;
+}
+
+@media (max-width: 768px) {
+  .landing-header {
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .landing-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .landing-nav a {
+    margin-left: 0;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .landing-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+    margin-top: -40px;
+  }
+  
+  .feature-item {
+    width: 100%;
+    max-width: 320px;
+  }
+}

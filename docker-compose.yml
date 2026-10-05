@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: ../deployment/Dockerfile.backend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ../deployment/Dockerfile.frontend

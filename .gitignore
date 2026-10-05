@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.env
+*.log
+
+# AI/ML Artifacts
+ai/models/trained/*
+!ai/models/trained/.gitkeep
+ai/datasets/raw/*
+!ai/datasets/raw/.gitkeep

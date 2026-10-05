@@ -1,0 +1,119 @@
+.reports-card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-bottom: 1px solid var(--clr-border);
+  padding-bottom: 16px;
+}
+
+.btn-print {
+  background: var(--clr-surface);
+  border: 1.5px solid var(--clr-border);
+  color: var(--clr-text);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-print:hover {
+  background: var(--clr-accent-lt);
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.report-item {
+  background: var(--clr-bg);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--clr-border);
+}
+
+.report-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.report-value {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--clr-text);
+}
+
+.risk-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.risk-high {
+  background: var(--clr-high-bg);
+  color: var(--clr-high);
+}
+
+.risk-medium {
+  background: var(--clr-medium-bg);
+  color: var(--clr-medium);
+}
+
+.risk-low {
+  background: var(--clr-low-bg);
+  color: var(--clr-low);
+}
+
+.reports-footer {
+  text-align: right;
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+  border-top: 1px solid var(--clr-border);
+  padding-top: 16px;
+}
+
+/* Print Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .reports-card, .reports-card * {
+    visibility: visible;
+  }
+  .reports-card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+  }
+  .btn-print {
+    display: none !important;
+  }
+}

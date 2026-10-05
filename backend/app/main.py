@@ -7,6 +7,10 @@ from backend.app.api.regional import router as regional_router
 
 app = FastAPI(title="MeghDrishti API")
 
+@app.get('/health')
+def health_check():
+    return {'status': 'healthy', 'api': 'MeghDrishti'}
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -19,3 +23,4 @@ app.include_router(predictions_router)
 app.include_router(geocode_router)
 app.include_router(reliability_router)
 app.include_router(regional_router)
+
